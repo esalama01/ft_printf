@@ -6,8 +6,13 @@
 /*   By: elsalama <elsalama@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/24 07:47:46 by elsalama          #+#    #+#             */
-/*   Updated: 2026/11/24 07:51:52 by elsalama         ###   ########.fr       */
+/*   Updated: 2026/11/24 07:55:15 by elsalama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../ft_printf.h"
+
+void	ft_putchar(char	c)
+{
+	write(1, &c, 1);
+}
