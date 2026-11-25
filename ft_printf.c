@@ -6,7 +6,7 @@
 /*   By: elsalama <elsalama@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/23 22:32:24 by elsalama          #+#    #+#             */
-/*   Updated: 2026/11/25 15:04:55 by elsalama         ###   ########.fr       */
+/*   Updated: 2026/11/25 15:07:27 by elsalama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,11 @@ int ft_printf(const char *str, ...)
             if (str[i + 1] && str[i + 1] == 'c')
             {
                 ft_putchar(va_arg(list, int));
+                i++;
+            }
+            if (str[i + 1] && str[i + 1] == '%')
+            {
+                ft_putchar('%');
                 i++;
             }
             if (str[i + 1] && str[i + 1] == 's')
