@@ -1,0 +1,71 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_hex.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: elsalama <elsalama@student.1337.ma>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/11/25 12:15:00 by elsalama          #+#    #+#             */
+/*   Updated: 2026/11/25 14:44:20 by elsalama         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "../ft_printf.h"
+
+static int	calc_size(long n)
+{
+	int	size;
+
+	size = 0;
+	while (n > 0)
+	{
+		size++;
+		n /= 16;
+	}
+	return (size);
+}
+
+static char	*zero_handler(void)
+{
+	char	*str;
+
+	str = malloc(2);
+	if (!str)
+		return (NULL);
+	str[0] = '0';
+	str[1] = '\0';
+	return (str);
+}
+
+static char	*ft_hexoa(unsigned int n)
+{
+	int		size;
+	int		l;
+	char	*str;
+	char	*base;
+
+	base = "0123456789abcdef";
+	if (n == 0)
+		return (zero_handler());
+	size = calc_size(n);
+	str = malloc(size + 1);
+	if (!str)
+		return (NULL);
+	l = size;
+	while (l-- > 0 && n > 0)
+	{
+		str[l] = base[n % 16];
+		n /= 16;
+	}
+	str[size] = '\0';
+	return (str);
+}
+
+void	ft_hex(int nb)
+{
+	char	*str;
+
+	str = ft_hexoa(nb);
+	ft_putstr(str);
+	free(str);
+}
