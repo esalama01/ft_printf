@@ -6,7 +6,7 @@
 /*   By: elsalama <elsalama@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/24 07:51:41 by elsalama          #+#    #+#             */
-/*   Updated: 2026/11/25 14:48:19 by elsalama         ###   ########.fr       */
+/*   Updated: 2026/11/25 15:04:13 by elsalama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,6 @@ void	ft_putstr(char *s);
 void	ft_putnbr(int nbr);
 void	ft_hex(int nb);
 void	ft_hexupper(int nb);
+void	ft_uputnbr(unsigned int nb);
 
 #endif
