@@ -6,13 +6,13 @@
 /*   By: elsalama <elsalama@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/25 12:15:00 by elsalama          #+#    #+#             */
-/*   Updated: 2026/11/26 16:51:20 by elsalama         ###   ########.fr       */
+/*   Updated: 2026/11/26 18:27:08 by elsalama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../ft_printf.h"
 
-static int	calc_size(long n)
+static int	calc_size(unsigned long n)
 {
 	int	size;
 
@@ -61,11 +61,15 @@ static char	*ft_hexoa(unsigned long n)
 	return (str);
 }
 
-void	ft_hex(unsigned long nb)
+int	ft_hex(unsigned long nb)
 {
 	char	*str;
+	int		count;
 
 	str = ft_hexoa(nb);
-	ft_putstr(str);
+	if (!str)
+		return (-1);
+	count = ft_putstr(str);
 	free(str);
+	return (count);
 }

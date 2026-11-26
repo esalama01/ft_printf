@@ -6,16 +6,16 @@
 /*   By: elsalama <elsalama@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/24 07:47:46 by elsalama          #+#    #+#             */
-/*   Updated: 2026/11/26 17:42:37 by elsalama         ###   ########.fr       */
+/*   Updated: 2026/11/26 18:37:19 by elsalama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../ft_printf.h"
 
-int	ft_putchar(char	c)
+int	ft_putchar(char c)
 {
 	int	l;
-	
+
 	l = write(1, &c, 1);
 	return (l);
 }
