@@ -6,7 +6,7 @@
 /*   By: elsalama <elsalama@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/25 14:47:50 by elsalama          #+#    #+#             */
-/*   Updated: 2026/11/26 16:21:14 by elsalama         ###   ########.fr       */
+/*   Updated: 2026/11/26 16:52:40 by elsalama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ static char	*zero_handler(void)
 	return (str);
 }
 
-static char	*ft_hexoa(unsigned int n)
+static char	*ft_hexoa(unsigned long n)
 {
 	int		size;
 	int		l;
@@ -61,7 +61,7 @@ static char	*ft_hexoa(unsigned int n)
 	return (str);
 }
 
-void	ft_hexupper(int nb)
+void	ft_hexupper(unsigned long nb)
 {
 	char	*str;
 
